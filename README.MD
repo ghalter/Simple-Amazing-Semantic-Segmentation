@@ -6,6 +6,25 @@
 
 >Amazing Semantic Segmentation on Tensorflow && Keras (include FCN, UNet, SegNet, PSPNet, PAN, RefineNet, DeepLabV3, DeepLabV3+, DenseASPP, BiSegNet ...)
 ***
+## About this Fork
+This is a fork of the Amazing-Semantic-Segmentation, the simple idea is, 
+to make the already existing amazing semantic segmentation project easiert to integrate. 
+
+```
+    
+    ds = ImageMaskDataset(my_images, my_labeled_masks)
+    
+    # Use the SemanticSegmentationModel.MD_* to select a model
+    model = SemanticSegmentationModel("store-directory", SemanticSegmentationModel.MD_DeepLabV3Plus, 20, (512,512))
+    
+    # Train the model on your dataset
+    model.train(ds, batch_size=2, steps_per_epoch=1000)
+    
+    # Predict with the model
+    model.predict(my_image)
+```
+
+
 ## Models
 The project supports these semantic segmentation models as follows:
 

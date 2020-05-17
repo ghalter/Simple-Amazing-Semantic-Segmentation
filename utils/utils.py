@@ -13,8 +13,9 @@ import cv2
 
 
 def load_image(name):
-    img = Image.open(name)
-    return np.array(img)
+    if ".png" in name:
+        return cv2.imread(name, cv2.IMREAD_GRAYSCALE)
+    return cv2.imread(name)
 
 
 def resize_image(image, label, target_size=None):
